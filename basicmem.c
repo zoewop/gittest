@@ -12,12 +12,12 @@ void kmalloc_test( void )
     printk( "kmalloc test\n" );
     
 	/* TODO: 1024 사이즈 만큼 kmalloc로 buff에 할당하기 */
-	allocSize = 1024;
+	allocSize = 4096;
 	buff = kmalloc(allocSize, GFP_KERNEL);
 
 	if( buff != NULL )
     {
-        sprintf( buff, "test memory : %lu\n", allocSize);
+        sprintf( buff, "kmalloc test memory : %lu\n", allocSize);
         printk( buff );
     
         kfree( buff );
